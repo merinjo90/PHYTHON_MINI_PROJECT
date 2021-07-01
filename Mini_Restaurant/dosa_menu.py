@@ -66,6 +66,9 @@ def Mini_dosaCorner():
     print("total   : ",total)
     print("")
 
+def cashback():
+    print("#"*20,"DO YOU WANT CASHBACK OFFER???? IF YES THEN CHOOSE OPTIONS" ,"#"*20)
 
 
 Mini_dosaCorner()
+cashback()
