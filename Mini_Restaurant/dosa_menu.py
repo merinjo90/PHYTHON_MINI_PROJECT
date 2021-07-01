@@ -84,10 +84,28 @@ def cashback():
         print("OOPS !!! SORRY YOU DONT HAVE  ANY CASHBACK OFFER")
     else:
         print("PLEASE TRY AGAIN")
-
-
-
+def feedback():
+    print("#"*20,"GIVE YOUR FEEDBACK","#"*20)
+    print("a. excelent services")
+    print("b. good services")
+    print("c. can do better")
+    print("e. bad services")
+    print("")
+    ch=input("Enter yur opinion:")
+    if ch=="a":
+        print("excelent services")
+    elif ch=="b":
+        print("good services")
+    elif ch=="c":
+        print("can do better")
+    elif ch=="d":
+        print("bad services")
+    else:
+        print("PLEASE TRY AGAIN")
+    print("")
+    print("|"*20,"THANK YOU VISIT AGAIN,WE HOPE YOU ENJOYED","|"*20)
 
 
 Mini_dosaCorner()
 cashback()
+feedback()
