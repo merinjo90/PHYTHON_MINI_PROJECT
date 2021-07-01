@@ -68,6 +68,25 @@ def Mini_dosaCorner():
 
 def cashback():
     print("#"*20,"DO YOU WANT CASHBACK OFFER???? IF YES THEN CHOOSE OPTIONS" ,"#"*20)
+    print("a. YES THROUGH PAYTM APP")
+    print("b. YES THROUGH PHONE APP")
+    print("c. YES THROUGH FUTURE PAY APP")
+    print("d. NO...I DNT WANT CASHBACK")
+    print("")
+    c=input("Select your options:")
+    if c=="a":
+        print("WOW !!! YOU HAVE ACHIVED A CASHBACK OFFER RS. 500")
+    elif c=="b":
+        print("WOW !!! YOU HAVE ACHIVED A CASHBACK OFFER RS. 700")
+    elif c=="c":
+        print("WOW !!! YOU HAVE ACHIVED A CASHBACK OFFER RS. 450")
+    elif c=="d":
+        print("OOPS !!! SORRY YOU DONT HAVE  ANY CASHBACK OFFER")
+    else:
+        print("PLEASE TRY AGAIN")
+
+
+
 
 
 Mini_dosaCorner()
