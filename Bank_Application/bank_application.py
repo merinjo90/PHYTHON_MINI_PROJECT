@@ -22,5 +22,17 @@ class AccountHolder:  # child class
         self.Name = name  # instance variable
         self.AccNo = accNo
 
+
+    def personal_details(self): #instance functions
+        print("BANK DETAILS\n")
+        print("Bank Name: ", Account.BankName)
+        print("IFSCcode : ", Account.IFSCcode)
+        print("")
+        print("CUSTOMER DETAILS")
+        print("")
+        print("Name: ", self.Name)
+        print("Account Number",self.AccNo)
+        print("")
+
 account=Account()
 account_holder=AccountHolder("amala",123)
