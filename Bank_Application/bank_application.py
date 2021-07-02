@@ -34,5 +34,14 @@ class AccountHolder:  # child class
         print("Account Number",self.AccNo)
         print("")
 
+    def Deposit(self):
+        self.personal_details()
+        # Account.bank_details()
+        amount = float(input("Enter the amount to be deposite:"))
+        Account.Balance = Account.Balance + amount
+        print("Deposite is succesful and the balance in the account is %f" % Account.Balance)
+        print("------------------")
+
 account=Account()
 account_holder=AccountHolder("amala",123)
+account_holder.Deposit()
