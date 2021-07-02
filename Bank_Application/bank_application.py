@@ -52,8 +52,13 @@ class AccountHolder:  # child class
             print("Sorry Insufficient balance")
         print("------------------")
 
+    def Balacecheck(self):
+        print("Balance in the account is %f" %Account.Balance)
+
 account=Account()
 account_holder=AccountHolder("amala",123)
 account_holder.Deposit()
 account_holder.widrow()
+account_holder.Balacecheck()
+
 
