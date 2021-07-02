@@ -16,3 +16,11 @@ class Account:       #parent class
     BankName="ABC"
     IFSCcode=45154
     min_balance=1000
+
+class AccountHolder:  # child class
+    def __init__(self, name, accNo):
+        self.Name = name  # instance variable
+        self.AccNo = accNo
+
+account=Account()
+account_holder=AccountHolder("amala",123)
