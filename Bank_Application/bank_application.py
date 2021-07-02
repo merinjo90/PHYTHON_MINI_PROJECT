@@ -42,6 +42,18 @@ class AccountHolder:  # child class
         print("Deposite is succesful and the balance in the account is %f" % Account.Balance)
         print("------------------")
 
+
+    def widrow(self):
+        widr_amount=float(input("Enter the amount to be Widrow:"))
+        if Account.Balance-widr_amount >=Account.min_balance:
+            Account.Balance=Account.Balance-widr_amount
+            print("Widrow is succesful and updated balance in the account is %f" % Account.Balance)
+        else:
+            print("Sorry Insufficient balance")
+        print("------------------")
+
 account=Account()
 account_holder=AccountHolder("amala",123)
 account_holder.Deposit()
+account_holder.widrow()
+
