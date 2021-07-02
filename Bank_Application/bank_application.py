@@ -10,3 +10,9 @@
 #         : for balance checking dont want to pass any amount.
 #         : provided min balance required is limited to 1000.
 """
+
+class Account:       #parent class
+    Balance=10000    #class variables
+    BankName="ABC"
+    IFSCcode=45154
+    min_balance=1000
