@@ -46,6 +46,11 @@ def calcuate_age():
         #if birth date is greater then given birth_mnth
         #then do not count this month and add 30 to the date so as to subtract the date and get the remaining days
 
+        month=[31,28,31,30,31,30,31,31,30,31,30,31]
+        if(birth_day>given_day):
+            given_month=given_month-1
+            given_day=given_day+month[birth_month-1]
+
 
 
 
