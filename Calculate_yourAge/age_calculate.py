@@ -60,6 +60,9 @@ def calcuate_age():
         calc_day=given_day-birth_day
         calc_month=given_month-birth_month
         calc_year=given_year-birth_year
+        rslt_day_field.insert(10,str(calc_day))
+        rslt_month_field.insert(10,str(calc_month))
+        rslt_year_field.insert(10,str(calc_year))
 
 
 
