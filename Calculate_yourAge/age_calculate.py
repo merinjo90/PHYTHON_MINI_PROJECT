@@ -2,6 +2,7 @@
 from tkinter import*
 from tkinter import messagebox
 
+#function for clearing the content of all text entry boxes
 def clear_all():
     day_field.delete(0,END)
     month_field.delete(0,END)
@@ -15,19 +16,36 @@ def clear_all():
     rslt_month_field.delete(0,END)
     rslt_year_field.delete(0,END)
 
+#functin for checking error
 def check_error():
-    
+    #if any of entry field is empty then shw an error msg"clear all entries"
+    if(day_field.get()):
+        pass
+
 
 
 #create gui window
-ageCalculator= Tk()
+age_calculate_window= Tk()
 #set background clr f gui window
-ageCalculator.configure(background="light yellow")
+age_calculate_window.configure(background="light yellow")
 #set name of gui window
-ageCalculator.title("AGE CALCULATOR")
+age_calculate_window.title("AGE CALCULATOR")
 #set congifuration of window
-ageCalculator.geometry("500x250")
+age_calculate_window.geometry("500x250")
 #Create a DOB label
 
 
-#ageCalculator.mainloop()
+#create a text entry box for filling or typing the information
+day_field=Entry(age_calculate_window)
+month_field=Entry(age_calculate_window)
+year_field=Entry(age_calculate_window)
+
+given_day_field=Entry(age_calculate_window)
+given_month_field=Entry(age_calculate_window)
+given_year_field=Entry(age_calculate_window)
+
+rslt_day_field=Entry(age_calculate_window)
+rslt_month_field=Entry(age_calculate_window)
+rslt_year_field=Entry(age_calculate_window)
+
+age_calculate_window.mainloop()
