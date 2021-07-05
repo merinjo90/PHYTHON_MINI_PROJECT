@@ -43,6 +43,9 @@ def calcuate_age():
         given_month=int(given_month_field.get())
         given_year=int(given_year_field.get())
 
+        #if birth date is greater then given birth_mnth
+        #then do not count this month and add 30 to the date so as to subtract the date and get the remaining days
+
 
 
 
