@@ -19,8 +19,12 @@ def clear_all():
 #functin for checking error
 def check_error():
     #if any of entry field is empty then shw an error msg"clear all entries"
-    if(day_field.get()):
-        pass
+    if(day_field.get()==""or month_field.get()=="" or year_field.get()=="" or
+    given_day_field.get()=="" or given_month_field.get()=="" or given_year_field.get()=="" or
+    rslt_day_field.get()=="" or rslt_month_field.get()=="" or rslt_year_field):
+        messagebox.showerror("Input Error")
+        clear_all()
+        return -1
 
 
 
