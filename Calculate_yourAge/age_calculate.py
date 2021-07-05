@@ -26,6 +26,26 @@ def check_error():
         clear_all()
         return -1
 
+#function to calculate age
+def calcuate_age():
+    #check for error
+    value=check_error()
+    #if error occure then return
+    if value == -1:
+        return
+    else:
+        #take a value from the respective entry boxes get method returns current text as string
+        birth_day=int(day_field.get())
+        birth_month=int(month_field.get())
+        birth_year=int(year_field.get())
+
+        given_day=int(given_day_field.get())
+        given_month=int(given_month_field.get())
+        given_year=int(given_year_field.get())
+
+
+
+
 
 
 #create gui window
