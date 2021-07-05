@@ -2,6 +2,21 @@
 from tkinter import*
 from tkinter import messagebox
 
+def clear_all():
+    day_field.delete(0,END)
+    month_field.delete(0,END)
+    year_field.delete(0,END)
+
+    given_day_field.delete(0,END)
+    given_month_field.delete(0,END)
+    given_year_field.delete(0,END)
+
+    rslt_day_field.delete(0,END)
+    rslt_month_field.delete(0,END)
+    rslt_year_field.delete(0,END)
+
+def check_error():
+    
 
 
 #create gui window
@@ -15,4 +30,4 @@ ageCalculator.geometry("500x250")
 #Create a DOB label
 
 
-ageCalculator.mainloop()
+#ageCalculator.mainloop()
