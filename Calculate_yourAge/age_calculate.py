@@ -51,6 +51,16 @@ def calcuate_age():
             given_month=given_month-1
             given_day=given_day+month[birth_month-1]
 
+        #if birth month exceed given month,then donot count this year and add 12 to the month
+        # so that we can subtract and find out the difference
+        if(birth_month>given_month):
+            given_year=given_year-1
+            given_month=given_month+12
+        #calcuate day,month,year
+        calc_day=given_day-birth_day
+        calc_month=given_month-birth_month
+        calc_year=given_year-birth_year
+
 
 
 
