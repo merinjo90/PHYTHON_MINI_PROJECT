@@ -19,9 +19,8 @@ def clear_all():
 #functin for checking error
 def check_error():
     #if any of entry field is empty then shw an error msg"clear all entries"
-    if(day_field.get()==""or month_field.get()=="" or year_field.get()=="" or
-    given_day_field.get()=="" or given_month_field.get()=="" or given_year_field.get()=="" or
-    rslt_day_field.get()=="" or rslt_month_field.get()=="" or rslt_year_field):
+    if(day_field.get()=="" or month_field.get()=="" or year_field.get()=="" or
+    given_day_field.get()=="" or given_month_field.get()=="" or given_year_field.get()==""):
         messagebox.showerror("Input Error")
         clear_all()
         return -1
@@ -30,6 +29,7 @@ def check_error():
 def calcuate_age():
     #check for error
     value=check_error()
+    print(value)
     #if error occure then return
     if value == -1:
         return
@@ -67,17 +67,15 @@ def calcuate_age():
 
 
 
-
-
+#if __name__="__main__":
 #create gui window
 age_calculate_window= Tk()
 #set background clr f gui window
-age_calculate_window.configure(background="light yellow")
+age_calculate_window.configure(background="light blue")
 #set name of gui window
 age_calculate_window.title("AGE CALCULATOR")
 #set congifuration of window
 age_calculate_window.geometry("500x250")
-#Create a DOB label
 
 
 #create a text entry box for filling or typing the information
@@ -92,5 +90,48 @@ given_year_field=Entry(age_calculate_window)
 rslt_day_field=Entry(age_calculate_window)
 rslt_month_field=Entry(age_calculate_window)
 rslt_year_field=Entry(age_calculate_window)
+
+#Create a DOB label
+dob=Label(age_calculate_window,text="Date of Birth",bg="white")
+dob.grid(row=0,column=1)
+given_date=Label(age_calculate_window,text="Given Date",bg="white")
+given_date.grid(row=0,column=4)
+
+day=Label(age_calculate_window,text="Date",bg="light blue")
+day.grid(row=1,column=0)
+day_field.grid(row=1,column=1)
+month=Label(age_calculate_window,text="Month",bg="light blue")
+month.grid(row=2,column=0)
+month_field.grid(row=2,column=1)
+year=Label(age_calculate_window,text="Year",bg="light blue")
+year.grid(row=3,column=0)
+year_field.grid(row=3,column=1)
+
+givDay=Label(age_calculate_window,text="Given Date",bg="light blue")
+givDay.grid(row=1,column=3)
+given_day_field.grid(row=1,column=4)
+givMonth=Label(age_calculate_window,text="Given Month",bg="light blue")
+givMonth.grid(row=2,column=3)
+given_month_field.grid(row=2,column=4)
+givYear=Label(age_calculate_window,text="Given Year",bg="light blue")
+givYear.grid(row=3,column=3)
+given_year_field.grid(row=3,column=4)
+
+rsltDay=Label(age_calculate_window,text="Date",bg="light blue")
+rsltDay.grid(row=9,column=2)
+rslt_day_field.grid(row=10,column=2)
+rsltMonth=Label(age_calculate_window,text="Month",bg="light blue")
+rsltMonth.grid(row=7,column=2)
+rslt_month_field.grid(row=8,column=2)
+rsltYear=Label(age_calculate_window,text="Year",bg="light blue")
+rsltYear.grid(row=5,column=2)
+rslt_year_field.grid(row=6,column=2)
+
+resultAge=Button(age_calculate_window,text="Calculated Age",bg="green",command=calcuate_age)
+resultAge.grid(row=4,column=2)
+
+
+clearAllEntry=Button(age_calculate_window,text="Reset",fg="Black",bg="blue",command=clear_all)
+clearAllEntry.grid(row=12,column=2)
 
 age_calculate_window.mainloop()
