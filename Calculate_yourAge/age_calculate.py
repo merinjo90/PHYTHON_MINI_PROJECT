@@ -127,11 +127,11 @@ rsltYear=Label(age_calculate_window,text="Year",bg="light blue")
 rsltYear.grid(row=5,column=2)
 rslt_year_field.grid(row=6,column=2)
 
-resultAge=Button(age_calculate_window,text="Calculated Age",bg="green",command=calcuate_age)
+resultAge=Button(age_calculate_window,text="Calculated Age",bg="light green",command=calcuate_age)
 resultAge.grid(row=4,column=2)
 
 
-clearAllEntry=Button(age_calculate_window,text="Reset",fg="Black",bg="blue",command=clear_all)
+clearAllEntry=Button(age_calculate_window,text="Reset",fg="Black",bg="light pink",command=clear_all)
 clearAllEntry.grid(row=12,column=2)
 
 age_calculate_window.mainloop()
