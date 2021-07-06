@@ -66,6 +66,14 @@ screen.onkeypress(go_right,"Right")
 
 while True:
     screen.update()
+    #snake and border collision
+    if snake.xcor()>290 or snake.xcor()<-290 or snake.ycor()>290 or snake.xcor()<-290:
+        time.sleep(2)
+        snake.goto(0,0)
+        snake.direction="stop"
+        for seg in segment:
+            seg.goto(1000,1000)
+            segment.clear()
     #food position changed
     if snake.distance(food)<15:
         x=random.randint(-290,290)
@@ -78,7 +86,7 @@ while True:
         new_segment.color("blue")
         new_segment.penup()
         segment.append(new_segment)
-        
+
     for index in range(len(segment)-1,0,-1):
         x=segment[index-1].xcor()
         y=segment[index-1].ycor()
