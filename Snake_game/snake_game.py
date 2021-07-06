@@ -86,8 +86,11 @@ while True:
         for seg in segment:
             seg.goto(1500,1500)
         segment.clear()
+        score=0 #border touch,when game is over and score reset to zero
+        scoring.clear()
+        scoring.write("Score = {} High Score ={}".format(score, high_score), align="center",font=("corier", 16, "normal"))
 
-#food position changed
+    #food position changed
     if snake.distance(food)<15:
         x=random.randint(-290,290)
         y=random.randint(-290,290)
@@ -129,6 +132,9 @@ while True:
             for seg in segment:
                 seg.goto(1500, 1500)
             segment.clear()
+            score = 0  # body to body touch,when game is over and score reset to zero
+            scoring.clear()
+            scoring.write("Score = {} High Score ={}".format(score, high_score), align="center",font=("corier", 16, "normal"))
 
     time.sleep(delay)
 
