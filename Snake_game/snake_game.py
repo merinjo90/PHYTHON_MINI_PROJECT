@@ -4,6 +4,8 @@ import random
 
 delay=0.1
 segment=[]
+score=0
+high_score=0
 
 #creating turtle screen
 screen=turtle.Screen()
@@ -31,13 +33,13 @@ food.goto(0,150)
 food.shapesize(0.5,0.5)
 
 #score
-score=turtle.Turtle()
-score.speed(0)
-score.color("black")
-score.penup()
-score.hideturtle()
-score.goto(0,260)
-score.write("Score=0   High Score:0",align="center",font=("corier",16,"normal"))
+scoring=turtle.Turtle()
+scoring.speed(0)
+scoring.color("black")
+scoring.penup()
+scoring.hideturtle()
+scoring.goto(0,260)
+scoring.write("Score=0   High Score:0",align="center",font=("corier",16,"normal"))
 
 #snake head moving
 def go_up():
@@ -97,6 +99,13 @@ while True:
         new_segment.color("blue")
         new_segment.penup()
         segment.append(new_segment)
+
+#food touch when calculate score
+        score=score+10
+        if score>high_score:
+            high_score=score
+            scoring.clear()
+            scoring.write("Score = {} High Score ={}".format(score,high_score),align="center",font=("corier",16,"normal"))
 
     for index in range(len(segment)-1,0,-1):
         x=segment[index-1].xcor()
