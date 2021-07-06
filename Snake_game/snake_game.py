@@ -1,11 +1,12 @@
 import turtle
-import random
-import time
 
 #creating turtle screen
 screen=turtle.Screen()
 screen.title("SNAKE GAME")
-screen.bgcolor("light blue")
+screen.bgcolor("light gray")
 screen.setup(width=600,height=600)
 screen.tracer(0)
-turtle.Terminator()
+
+
+
+screen.mainloop()
