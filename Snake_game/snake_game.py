@@ -3,6 +3,7 @@ import time
 import random
 
 delay=0.1
+segment=[]
 
 #creating turtle screen
 screen=turtle.Screen()
@@ -70,6 +71,23 @@ while True:
         x=random.randint(-290,290)
         y=random.randint(-290,290)
         food.goto(x,y)
+
+        new_segment=turtle.Turtle()
+        new_segment.speed(0)
+        new_segment.shape("square")
+        new_segment.color("blue")
+        new_segment.penup()
+        segment.append(new_segment)
+        
+    for index in range(len(segment)-1,0,-1):
+        x=segment[index-1].xcor()
+        y=segment[index-1].ycor()
+        segment[index].goto(x,y)
+    #snake length is increasing
+    if len(segment)>0:
+        x=snake.xcor()
+        y=snake.ycor()
+        segment[0].goto(x,y)
 
     snake_move()
     time.sleep(delay)
