@@ -17,10 +17,23 @@ snake.color("green")
 snake.speed(0)
 snake.penup()
 snake.goto(0,0)
-snake.direction="right"
+snake.direction="stop"
+
+def go_up():
+    snake.direction="up"
+
+def go_down():
+    snake.direction="down"
+
+def go_left():
+    snake.direction="left"
+
+def go_right():
+    snake.direction="right"
+
 
 #snake head moving
-def snakeMove():
+def snake_move():
     if snake.direction=="up":
         y=snake.ycor()
         snake.sety(y+20)
@@ -34,11 +47,15 @@ def snakeMove():
         x=snake.xcor()
         snake.setx(x+20)
 
-
+screen.listen()
+screen.onkeypress(go_up,"w")
+screen.onkeypress(go_down,"s")
+screen.onkeypress(go_left,"a")
+screen.onkeypress(go_right,"d")
 
 while True:
     screen.update()
-    snakeMove()
+    snake_move()
     time.sleep(delay)
 
 
