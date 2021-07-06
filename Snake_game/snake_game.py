@@ -43,16 +43,20 @@ scoring.write("Score=0   High Score:0",align="center",font=("corier",16,"normal"
 
 #snake head moving
 def go_up():
-    snake.direction="up"
+    if snake.direction !="down":
+        snake.direction="up"
 
 def go_down():
-    snake.direction="down"
+    if snake.direction !="up":
+        snake.direction="down"
 
 def go_left():
-    snake.direction="left"
+    if snake.direction !="right":
+        snake.direction="left"
 
 def go_right():
-    snake.direction="right"
+    if snake.direction !="left":
+        snake.direction="right"
 
 
 def snake_move():
@@ -90,7 +94,7 @@ while True:
         scoring.clear()
         scoring.write("Score = {} High Score ={}".format(score, high_score), align="center",font=("corier", 16, "normal"))
 
-    #food position changed
+#food position changed
     if snake.distance(food)<15:
         x=random.randint(-290,290)
         y=random.randint(-290,290)
@@ -138,6 +142,4 @@ while True:
 
     time.sleep(delay)
 
-
 screen.mainloop()
-#turtle.Terminator()
