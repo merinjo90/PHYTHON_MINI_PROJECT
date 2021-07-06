@@ -8,7 +8,7 @@ segment=[]
 #creating turtle screen
 screen=turtle.Screen()
 screen.title("SNAKE GAME")
-screen.bgcolor("black")
+screen.bgcolor("#FFF873")
 screen.setup(width=600,height=600)
 screen.tracer(0)
 
@@ -25,10 +25,19 @@ snake.direction="stop"
 food=turtle.Turtle()
 food.speed(0)
 food.shape("circle")
-food.color("yellow")
+food.color("red")
 food.penup()
 food.goto(0,150)
 food.shapesize(0.5,0.5)
+
+#score
+score=turtle.Turtle()
+score.speed(0)
+score.color("black")
+score.penup()
+score.hideturtle()
+score.goto(0,260)
+score.write("Score=0   High Score:0",align="center",font=("corier",16,"normal"))
 
 #snake head moving
 def go_up():
@@ -66,15 +75,17 @@ screen.onkeypress(go_right,"Right")
 
 while True:
     screen.update()
-    #snake and border collision
+
+#snake and border collision
     if snake.xcor()>290 or snake.xcor()<-290 or snake.ycor()>290 or snake.xcor()<-290:
         time.sleep(2)
         snake.goto(0,0)
         snake.direction="stop"
         for seg in segment:
-            seg.goto(1000,1000)
-            segment.clear()
-    #food position changed
+            seg.goto(1500,1500)
+        segment.clear()
+
+#food position changed
     if snake.distance(food)<15:
         x=random.randint(-290,290)
         y=random.randint(-290,290)
@@ -91,15 +102,27 @@ while True:
         x=segment[index-1].xcor()
         y=segment[index-1].ycor()
         segment[index].goto(x,y)
-    #snake length is increasing
+
+#snake length is increasing
     if len(segment)>0:
         x=snake.xcor()
         y=snake.ycor()
         segment[0].goto(x,y)
 
     snake_move()
+
+#snake collision
+    for seg in segment:
+        if seg.distance(snake)<20:
+            time.sleep(2)
+            snake.goto(0,0)
+            snake.direction="stop"
+            for seg in segment:
+                seg.goto(1500, 1500)
+            segment.clear()
+
     time.sleep(delay)
 
 
-#turtle.Terminator()
 screen.mainloop()
+#turtle.Terminator()
