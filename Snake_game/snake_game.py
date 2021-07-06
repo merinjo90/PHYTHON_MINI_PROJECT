@@ -1,5 +1,6 @@
 import turtle
 import time
+import random
 
 delay=0.1
 
@@ -64,6 +65,12 @@ screen.onkeypress(go_right,"Right")
 
 while True:
     screen.update()
+    #food position changed
+    if snake.distance(food)<15:
+        x=random.randint(-290,290)
+        y=random.randint(-290,290)
+        food.goto(x,y)
+
     snake_move()
     time.sleep(delay)
 
