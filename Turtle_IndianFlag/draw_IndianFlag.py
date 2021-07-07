@@ -38,7 +38,23 @@ flag.left(90)
 
 flag.end_fill()
 
-turtle.done()
+#orange rectangle
+flag.color("#FF9933")
+draw(-350,90)
 
+flag.begin_fill()
+
+flag.right(180)
+flag.forward(700)
+flag.left(90)
+flag.forward(200)
+flag.left(90)
+flag.forward(700)
+flag.left(90)
+flag.forward(200)
+flag.end_fill()
+
+turtle.done()
+turtle.hideturtle()
 
 screen.mainloop()
