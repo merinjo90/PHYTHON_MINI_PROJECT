@@ -23,7 +23,7 @@ flag.circle(80,360)
 draw(0,-90)
 
 #green rectangle
-flag.color("green")
+flag.color("#138808")
 flag.begin_fill()
 
 flag.forward(350)
@@ -37,7 +37,6 @@ flag.forward(200)
 flag.left(90)
 
 flag.end_fill()
-
 
 turtle.done()
 
