@@ -55,29 +55,5 @@ turtle.circle(100,steps=10)
 turtle.penup()
 turtle.end_fill()
 turtle.home()
-"""
-def triangle():
-    turtle.pensize(6)  # change the stroke on the shape
-    turtle.begin_fill()
-    turtle.fillcolor("orange")
-    turtle.circle(100,steps=3) #radius circle pixels
-    turtle.end_fill()
-triangle()
-turtle.reset()
-
-
-def pentagon():
-    turtle.pensize(6)  # change the stroke on the shape
-    turtle.begin_fill()
-    turtle.fillcolor("yellow")
-    turtle.circle(100,steps=5) #radius circle pixels
-    turtle.end_fill()
-pentagon()
-turtle.reset()
-
-
-"""
-
-
 screen.exitonclick()
-#screen=turtle.mainloop()
+
