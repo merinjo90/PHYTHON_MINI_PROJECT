@@ -64,7 +64,5 @@ def circle4():
         t.up()
         t.bk(100)
 circle4()
-#t.reset()
-
 
 window.mainloop()
