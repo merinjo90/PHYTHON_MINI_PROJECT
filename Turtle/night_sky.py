@@ -47,7 +47,14 @@ def draw_star(pos,color,length):
 draw_star((100,100),"red",10)
 draw_star((200,100),"yellow",30)
 
-
+def write_text(color):
+    text.color(color)
+    text.penup()
+    text.goto(-180,-270)
+    text.pendown()
+    style=('Stencil Std Bold',50,'italic')
+    text.write('Good Night',font=style,move=True)
+write_text("green")
 
 
 turtle.done()
