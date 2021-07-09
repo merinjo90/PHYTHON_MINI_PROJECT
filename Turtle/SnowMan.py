@@ -54,7 +54,7 @@ for i in range(2):
     black_circle()
     x=x+40
 
-y=0#buttons
+y=0 #buttons
 for i in range(5):
     turtle.penup()
     turtle.goto(0,y)
@@ -62,6 +62,22 @@ for i in range(5):
     black_circle()
     y = y -55
 
+#mouth
+turtle.penup()
+turtle.goto(0,70)
+turtle.pendown()
+turtle.color("red")
+turtle.begin_fill()
+turtle.circle(17)
+turtle.end_fill()
+
+turtle.penup()
+turtle.goto(0,75)
+turtle.pendown()
+turtle.color("white")
+turtle.begin_fill()
+turtle.circle(17)
+turtle.end_fill()
 
 
 turtle.done
