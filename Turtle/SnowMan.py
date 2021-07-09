@@ -23,6 +23,21 @@ turtle.begin_fill()
 turtle.circle(110)
 turtle.end_fill()
 
+#body- middle of body
+turtle.penup()
+turtle.goto(0,-110)
+turtle.pendown()
+turtle.begin_fill()
+turtle.circle(90)
+turtle.end_fill()
+
+#head of snow man
+turtle.penup()
+turtle.goto(0,20)
+turtle.pendown()
+turtle.begin_fill()
+turtle.circle(70)
+turtle.end_fill()
 
 
 turtle.done
