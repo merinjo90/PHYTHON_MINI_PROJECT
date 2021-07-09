@@ -14,6 +14,16 @@ turtle.begin_fill()
 turtle.circle(300)
 turtle.end_fill()
 
+#body- bottom of body
+turtle.penup()
+turtle.goto(0,-280)
+turtle.pendown()
+turtle.color("white")
+turtle.begin_fill()
+turtle.circle(110)
+turtle.end_fill()
+
+
 
 turtle.done
 window.mainloop()
