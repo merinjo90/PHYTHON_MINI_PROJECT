@@ -39,6 +39,30 @@ turtle.begin_fill()
 turtle.circle(70)
 turtle.end_fill()
 
+#function to draw small black circe
+def black_circle():
+    turtle.color("black")
+    turtle.begin_fill()
+    turtle.circle(10)
+    turtle.end_fill()
+
+x=-20 #eyes
+for i in range(2):
+    turtle.penup()
+    turtle.goto(x,110)
+    turtle.pendown()
+    black_circle()
+    x=x+40
+
+y=0#buttons
+for i in range(5):
+    turtle.penup()
+    turtle.goto(0,y)
+    turtle.pendown()
+    black_circle()
+    y = y -55
+
+
 
 turtle.done
 window.mainloop()
