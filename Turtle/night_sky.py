@@ -22,13 +22,32 @@ text.hideturtle()
 def draw_moon(pos,color):
     x,y=pos
     moon.color(color)
-    moon.begin_fill()
     moon.penup()
     moon.goto(x,y)
     moon.pendown()
+    moon.begin_fill()
     moon.circle(50)
     moon.end_fill()
-draw_moon((-300,120),"white")
+draw_moon((-300,120),"white")#full moon
+draw_moon((-278,133),"black")#half moon
+
+#Star creation
+def draw_star(pos,color,length):
+    x,y=pos
+    star.color(color)
+    star.penup()
+    star.goto(x,y)
+    star.pendown()
+    star.begin_fill()
+    for i in range(5):
+        star.forward(length)
+        star.right(144)
+        star.forward(length)
+    star.end_fill()
+draw_star((100,100),"red",10)
+draw_star((200,100),"yellow",30)
+
+
 
 
 turtle.done()
