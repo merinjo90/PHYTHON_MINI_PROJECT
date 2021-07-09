@@ -4,20 +4,21 @@ import random
 #window setup
 window=turtle.Screen()
 window.setup(width=800,height=600)#window size
-window.bgcolor("black")#background clr
+window.bgcolor("black")#background color
+
+colors=['red','blue','orange','yellow','magenta','purple','peru','ivory','silver','lightpink','snow','floralwhite','lavender','lime','limegreen','aqua','crimson','navy','darkviolet','darkgreen']
 
 moon=turtle.Turtle()
 moon.hideturtle()
-
 
 star=turtle.Turtle()
 star.speed(0)
 star.hideturtle()
 
-
 text=turtle.Turtle()
 text.speed(6)
 text.hideturtle()
+
 #draw moon with animation
 def draw_moon(pos,color):
     x,y=pos
@@ -28,12 +29,10 @@ def draw_moon(pos,color):
     moon.begin_fill()
     moon.circle(50)
     moon.end_fill()
-draw_moon((-300,120),"white")#full moon
-draw_moon((-278,133),"black")#half moon
 
 #Star creation
-def draw_star(pos,color,length):
-    x,y=pos
+def draw_star(x,y,color,length):
+    #x,y=pos
     star.color(color)
     star.penup()
     star.goto(x,y)
@@ -44,9 +43,13 @@ def draw_star(pos,color,length):
         star.right(144)
         star.forward(length)
     star.end_fill()
-draw_star((100,100),"red",10)
-draw_star((200,100),"yellow",30)
 
+def rand_pos():
+    return random.randint(-390,390),random.randint(-290,290)
+def rand_length():
+    return random.randint(5,25)
+
+#text creation
 def write_text(color):
     text.color(color)
     text.penup()
@@ -54,8 +57,19 @@ def write_text(color):
     text.pendown()
     style=('Stencil Std Bold',50,'italic')
     text.write('Good Night',font=style,move=True)
-write_text("green")
+
+#main program
+
+draw_moon((-300,170),"white")#full moon
+#draw_moon((-278,133),"black")#half moon
+
+while True:
+    color = random.choice(colors)
+    x,y=rand_pos()
+    length=rand_length()
+
+    draw_star(x,y,color,length)
+    write_text(color)
 
 
 turtle.done()
-#window.mainloop()
