@@ -79,6 +79,44 @@ turtle.begin_fill()
 turtle.circle(17)
 turtle.end_fill()
 
+#right arms
+turtle.penup()
+turtle.goto(75,0)
+turtle.pendown()
+turtle.color("brown")
+turtle.begin_fill()
+turtle.left(40)
+for i in range(2):
+    turtle.forward(75)
+    turtle.left(90)
+    turtle.forward(7)
+    turtle.left(90)
+turtle.end_fill()
+
+#right finger1
+turtle.penup()
+turtle.goto(115,38)
+turtle.pendown()
+turtle.begin_fill()
+turtle.left(40)
+for i in range(2):
+    turtle.forward(75)
+    turtle.left(90)
+    turtle.forward(5)
+    turtle.left(90)
+turtle.end_fill()
+
+#right finger2
+turtle.penup()
+turtle.goto(100)
+for i in range(2):
+    turtle.forward(75)
+    turtle.left(90)
+    turtle.forward(5)
+    turtle.left(90)
+turtle.end_fill()
+
+
 
 turtle.done
 window.mainloop()
