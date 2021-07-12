@@ -100,23 +100,37 @@ turtle.pendown()
 turtle.begin_fill()
 turtle.left(40)
 for i in range(2):
-    turtle.forward(75)
+    turtle.forward(25)
     turtle.left(90)
     turtle.forward(5)
     turtle.left(90)
 turtle.end_fill()
 
-#right finger2
+#left arms
 turtle.penup()
-turtle.goto(100)
+turtle.goto(-75,0)
+turtle.pendown()
+turtle.color("brown")
+turtle.begin_fill()
+turtle.left(40)
 for i in range(2):
     turtle.forward(75)
-    turtle.left(90)
-    turtle.forward(5)
-    turtle.left(90)
+    turtle.right(90)
+    turtle.forward(7)
+    turtle.right(90)
 turtle.end_fill()
 
+#left finger1
+turtle.penup()
+turtle.goto(-110,47)
+turtle.pendown()
+turtle.begin_fill()
+turtle.left(20)
+for i in range(2):
+    turtle.forward(25)
+    turtle.right(90)
+    turtle.forward(5)
+    turtle.right(90)
+turtle.end_fill()
 
-
-turtle.done
 window.mainloop()
